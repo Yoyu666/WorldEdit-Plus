@@ -76,8 +76,11 @@ class WorldEditor extends PluginBase implements Listener, CommandExecutor{
         }
         
         public function maketree($player, $size){
-        	$player->getLevel();
-        	$x = $player->getX
+        	$level = $player->getLevel();
+        	$x = $player->getX();
+        	$y = $player->getY();
+        	$z = $player->getZ();
+        	//$level->setBlock(new Vector3($x, $y, $z), Block::get(17, 0));
         }
 
 	public function session(Player $player){
