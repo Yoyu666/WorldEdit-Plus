@@ -321,6 +321,22 @@ class WorldEditor extends PluginBase implements Listener, CommandExecutor{
 				$this->W_sphere(new Position($sender->getX() - 0.5, $sender->getY(), $sender->getZ() - 0.5, $sender->getlevel()), $items, $radius, $radius, $radius, $filled, $sender);
                                 return true;
 				break;
+			case "flower":
+				if(!($sender instanceof Player)){
+                                $sender->sendMessage($this->prifks."ゲーム内で使用してください.");
+                                return true;
+                                break;
+                                }
+                                if ($args[0] == "small"){
+                                $player = $this->getServer()->getPlayer($sender->getName());
+                		$this->getServer()->dispatchCommand($player, "/set 0,0,0,31:1,37,38,38:1,38:2,38:3,38:4,38:5,38:6,38:7,38:8");
+                		return true;
+                		break;
+                	}
+                	$sender->sendMessage($this->prifks."使い方: //flower <small>");
+                	return true;
+                	break;
+                                
 			case "set":
 				if(!($sender instanceof Player)){
                                 $sender->sendMessage($this->prifks."ゲーム内で使用してください.");
