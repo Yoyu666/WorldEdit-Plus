@@ -69,6 +69,10 @@ commands:
   description: 
   usage: "//tree <size>"
   permission: worldeditor.command
+ /flower:
+  description: 
+  usage: "//flower <size>"
+  permission: worldeditor.command
 permissions:
     worldeditor:
         default: op
